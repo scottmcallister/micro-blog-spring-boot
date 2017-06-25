@@ -1,8 +1,10 @@
 package com.example.microblogspringboot.domain;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.List;
+
 
 /**
  * Created by scottmcallister on 2017-06-24.
