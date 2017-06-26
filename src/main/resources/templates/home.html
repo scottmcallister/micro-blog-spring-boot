@@ -5,10 +5,13 @@
     <title>Java Blog</title>
 </head>
 <body>
-    <h1 th:text="${message}"></h1>
+    <h1>Blog Entries</h1>
     <div th:each="entry : *{entries}">
         <h2 th:text="${entry.title}"></h2>
         <p th:text="${entry.content}"></p>
+        <a th:href="@{/entry/{id}(id = ${entry.id})}">edit</a><br />
+        <a th:href="@{/entry/delete/{id}(id = ${entry.id})}">delete</a>
     </div>
+    <a href="/entry">New Post</a>
 </body>
 </html>

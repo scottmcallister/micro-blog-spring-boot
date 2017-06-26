@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${pageTitle}"></title>
+</head>
+<body>
+    <h1 th:text="${pageTitle}"></h1>
+    <form method="post" th:action="${givenAction}">
+        <input name="title" type="text" placeholder="title" th:value="${givenTitle}" />
+        <textarea name="content" type="text" placeholder="content" th:text="${givenContent}"></textarea>
+        <button type="submit">Post</button>
+    </form>
+</body>
+</html>
