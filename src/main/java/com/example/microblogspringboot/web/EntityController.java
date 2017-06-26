@@ -1,7 +1,7 @@
 package com.example.microblogspringboot.web;
 
 import com.example.microblogspringboot.domain.Entry;
-import com.example.microblogspringboot.domain.EntryRepository;
+import com.example.microblogspringboot.repository.EntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.websocket.server.PathParam;
 
 /**
  * Created by scottmcallister on 2017-06-25.

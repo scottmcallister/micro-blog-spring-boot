@@ -1,7 +1,7 @@
 package com.example.microblogspringboot.web;
 
 import com.example.microblogspringboot.domain.Entry;
-import com.example.microblogspringboot.domain.EntryRepository;
+import com.example.microblogspringboot.repository.EntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

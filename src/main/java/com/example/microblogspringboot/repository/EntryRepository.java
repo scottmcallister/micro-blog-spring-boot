@@ -1,7 +1,7 @@
-package com.example.microblogspringboot.domain;
+package com.example.microblogspringboot.repository;
 
+import com.example.microblogspringboot.domain.Entry;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.List;
 
