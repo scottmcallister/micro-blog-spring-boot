@@ -3,13 +3,20 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title th:text="${pageTitle}"></title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
     <h1 th:text="${pageTitle}"></h1>
     <form method="post" th:action="${givenAction}">
-        <input name="title" type="text" placeholder="title" th:value="${givenTitle}" />
-        <textarea name="content" type="text" placeholder="content" th:text="${givenContent}"></textarea>
-        <button type="submit">Post</button>
+        <div>
+            <input name="title" type="text" placeholder="title" th:value="${givenTitle}" />
+        </div>
+        <div>
+            <textarea name="content" type="text" placeholder="content" th:text="${givenContent}"></textarea>
+        </div>
+        <div>
+            <button type="submit">Post</button>
+        </div>
     </form>
 </body>
 </html>

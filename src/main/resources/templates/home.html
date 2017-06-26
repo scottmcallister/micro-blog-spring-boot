@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Java Blog</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
     <h1>Blog Entries</h1>
@@ -12,6 +13,8 @@
         <a th:href="@{/entry/{id}(id = ${entry.id})}">edit</a><br />
         <a th:href="@{/entry/delete/{id}(id = ${entry.id})}">delete</a>
     </div>
-    <a href="/entry">New Post</a>
+    <div class="">
+        <a href="/entry">New Post</a>
+    </div>
 </body>
 </html>
