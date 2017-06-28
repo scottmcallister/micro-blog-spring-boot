@@ -34,7 +34,7 @@ public class HomeControllerTest {
 
     @Test
     public void home() throws Exception {
-        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk());
+        mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk());
     }
 
 }
