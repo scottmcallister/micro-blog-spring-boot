@@ -51,3 +51,4 @@ $ mvn test
 
 * [Spring Boot](https://projects.spring.io/spring-boot/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
+* [Thymeleaf](http://www.thymeleaf.org/) - Template system
