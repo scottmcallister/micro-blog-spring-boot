@@ -9,14 +9,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import java.util.List;
+
 
 /**
  * Created by scottmcallister on 2017-06-25.
  */
 @Controller
-public class EntityController {
+public class EntryController {
     @Autowired
     EntryRepository entryRepository;
+
+    @RequestMapping("/")
+    public String home(Model model){
+        List<Entry> allEntries = entryRepository.findAll();
+        model.addAttribute("entries", allEntries);
+        return "home";
+    }
 
     @RequestMapping(value = "/entry", method = RequestMethod.GET)
     public String newEntry(Model model) {

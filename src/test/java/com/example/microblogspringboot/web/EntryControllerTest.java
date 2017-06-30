@@ -21,6 +21,7 @@ import javax.swing.text.html.parser.Entity;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -36,10 +37,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class EntityControllerTest {
+public class EntryControllerTest {
 
     @Autowired
-    private EntityController controller;
+    private EntryController controller;
 
     @Autowired
     private MockMvc mockMvc;
@@ -49,6 +50,16 @@ public class EntityControllerTest {
     private MediaType contentType = new MediaType(MediaType.APPLICATION_JSON.getType(),
             MediaType.APPLICATION_JSON.getSubtype(),
             Charset.forName("utf8"));
+
+    @Test
+    public void contextLoads() throws Exception {
+        assertThat(controller).isNotNull();
+    }
+
+    @Test
+    public void home() throws Exception {
+        mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk());
+    }
 
     @Autowired
     void setConverters(HttpMessageConverter<?>[] converters) {
@@ -85,7 +96,6 @@ public class EntityControllerTest {
 
     @Test
     public void updateEntry() throws Exception {
-        // TODO:
         String entryUpdate = json(new Entry("blah", "blah blah blah"));
         mockMvc.perform(post("/entry/1")
                 .param("title", "blah")
